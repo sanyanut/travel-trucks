@@ -1,0 +1,28 @@
+.home_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("home-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home_content {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home_header {
+  color: #F7F7F7;
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.home_description {
+  color: #F7F7F7;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 40px;
+}

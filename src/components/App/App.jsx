@@ -1,6 +1,8 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import { Toaster } from 'react-hot-toast';
 import css from './App.module.css';
+import Loader from '../Loader/Loader.jsx';
 
 const Navigation = lazy(() => import('../Navigation/Navigation.jsx'));
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage.jsx'));
@@ -22,20 +24,19 @@ function App() {
   return (
     <div className={css.app_container}>
       <Navigation />
-      <div className={css.container}>
-        <Suspense>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/catalog" element={<CatalogPage />} />
-            <Route path="/catalog/:id" element={<CamperPage />}>
-              <Route index element={<Navigate to="features" replace />} />
-              <Route path="features" element={<CamperFeatures />} />
-              <Route path="reviews" element={<CamperReviews />} />
-            </Route>
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
-      </div>
+      <Toaster />
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<CamperPage />}>
+            <Route index element={<Navigate to="features" replace />} />
+            <Route path="features" element={<CamperFeatures />} />
+            <Route path="reviews" element={<CamperReviews />} />
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

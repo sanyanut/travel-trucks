@@ -1,14 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectCatalogCamper } from '../../redux/catalog/selectors';
-import CamperForm from '../CamperForm/CamperForm';
 import css from './CamperReviews.module.css';
 
 const CamperReviews = () => {
   const camper = useSelector(selectCatalogCamper);
   const totalStars = 5;
 
-  // Захист від null, якщо дані ще вантажаться
   if (!camper || !camper.reviews) {
     return null;
   }

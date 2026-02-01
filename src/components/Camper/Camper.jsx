@@ -9,7 +9,7 @@ function Camper() {
   const catalogCamper = useSelector(selectCatalogCamper);
 
   return (
-    <div className={css.camper}>
+    <div className={css.camper_container}>
       <h2 className={css.camper_card_name}>{catalogCamper?.name}</h2>
       <div className={css.camper_card_extra}>
         <svg width="16" height="16">

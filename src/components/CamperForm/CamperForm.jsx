@@ -2,11 +2,11 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import DatePicker from 'react-datepicker';
+import { toast } from 'react-hot-toast';
 import 'react-datepicker/dist/react-datepicker.css';
 import css from './CamperForm.module.css';
 
 const CamperForm = () => {
-  // Схема валідації Yup
   const validationSchema = Yup.object().shape({
     name: Yup.string().min(2, 'Too Short!').required('Name is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
@@ -20,11 +20,8 @@ const CamperForm = () => {
     bookingDate: null,
     comment: '',
   };
-
   const handleSubmit = (values, { resetForm }) => {
-    console.log('Form Data:', values);
-    // Тут логіка відправки, наприклад dispatch екшену
-    alert('Booking successful!');
+    toast.success('You booked your campervan successfully!');
     resetForm();
   };
 

@@ -1,7 +1,19 @@
-.catalog {
+.catalog_container {
   display: flex;
   justify-content: space-between;
   padding-top: 48px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 64px;
+}
+.catalog_not_found {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 16px;
 }
 .catalog_wrap {
   display: flex;
@@ -94,4 +106,13 @@
 .catalog_more {
   display: flex;
   justify-content: center;
+}
+.scroll-marker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  pointer-events: none;
 }

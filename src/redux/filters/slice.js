@@ -13,8 +13,13 @@ const filtersSlice = createSlice({
       state.form = action.payload.form;
       state.location = action.payload.location;
     },
+    resetFilters: state => {
+      state.features = [];
+      state.form = '';
+      state.location = '';
+    },
   },
 });
 
-export const { setFilters, setLocation, resetFilters } = filtersSlice.actions;
+export const { setFilters, resetFilters } = filtersSlice.actions;
 export const filtersSliceReducer = filtersSlice.reducer;

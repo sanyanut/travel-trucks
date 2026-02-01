@@ -1,27 +1,33 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setFilters } from '../../redux/filters/slice.js';
 import { staticParams } from '../../data/static';
 import css from './CatalogFilters.module.css';
 import Button from '../../fragments/Button/Button.jsx';
+import { selectIsLoading } from '../../redux/catalog/selectors.js';
+import { selectFilters } from '../../redux/filters/selectors.js';
 
 const CatalogFilters = () => {
   const dispatch = useDispatch();
-
-  const initialValues = {
-    features: [],
-    form: '',
-    location: '',
-  };
+  const filters = useSelector(selectFilters);
+  const isLoading = useSelector(selectIsLoading);
 
   const handleSubmit = values => {
     dispatch(setFilters(values));
   };
 
+  if (isLoading) {
+    return null;
+  }
+
   return (
     <aside className={css.filters}>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Formik
+        initialValues={filters}
+        enableReinitialize={true}
+        onSubmit={handleSubmit}
+      >
         {() => (
           <Form>
             <div className={css.filters_location}>

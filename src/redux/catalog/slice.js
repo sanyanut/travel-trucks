@@ -18,6 +18,11 @@ const catalogSlice = createSlice({
     isLoading: false,
     error: null,
   },
+  reducers: {
+    resetCatalogItem(state) {
+      state.camper = null;
+    },
+  },
   extraReducers: builder => {
     builder
       .addCase(fetchCatalog.pending, handlePending)
@@ -37,5 +42,5 @@ const catalogSlice = createSlice({
       .addCase(fetchCatalogItem.rejected, handleRejected);
   },
 });
-
+export const { resetCatalogItem } = catalogSlice.actions;
 export const catalogSliceReducer = catalogSlice.reducer;

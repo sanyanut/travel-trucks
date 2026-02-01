@@ -1,4 +1,7 @@
-.camper {
+.camper_container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 48px;
 }
 .camper_card_name, .camper_card_price {
