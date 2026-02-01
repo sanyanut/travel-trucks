@@ -1,0 +1,34 @@
+.button {
+  display: block;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 56px;
+  border-radius: 200px;
+  border: 1px solid;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.default {
+  background: #E44848;
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: #101828;
+  border-color: #DADDE1;
+}
+
+.button.default:hover {
+  background: #D84343;
+}
+
+.button.secondary:hover {
+  background: #ffffff;
+  color: #101828;
+  border-color: #D84343;
+}

@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+.logo{}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navigation_link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #101828;
+}
+.active {
+  color: #D84343;
+}
