@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background-image: url("home-bg.webp");
+  background-image: url("/home-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
