@@ -22,18 +22,20 @@ function App() {
   return (
     <div className={css.app_container}>
       <Navigation />
-      <Suspense>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/catalog" element={<CatalogPage />} />
-          <Route path="/catalog/:id" element={<CamperPage />}>
-            <Route index element={<Navigate to="features" replace />} />
-            <Route path="features" element={<CamperFeatures />} />
-            <Route path="reviews" element={<CamperReviews />} />
-          </Route>
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+      <div className={css.container}>
+        <Suspense>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/catalog" element={<CatalogPage />} />
+            <Route path="/catalog/:id" element={<CamperPage />}>
+              <Route index element={<Navigate to="features" replace />} />
+              <Route path="features" element={<CamperFeatures />} />
+              <Route path="reviews" element={<CamperReviews />} />
+            </Route>
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </div>
     </div>
   );
 }

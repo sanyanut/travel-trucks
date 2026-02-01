@@ -1,0 +1,36 @@
+.camper_features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 631px;
+  background: #F7F7F7;
+  border-radius: 10px;
+  padding: 44px 52px;
+}
+.camper_features_details {
+
+}
+.camper_features_heading {
+  color: #101828;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #DADDE1;
+}
+.camper_features_items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.camper_features_item {
+  display: flex;
+  justify-content: space-between;
+}
+.camper_features_text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101828;
+}

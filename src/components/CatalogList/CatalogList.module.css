@@ -90,13 +90,7 @@
   word-break: break-word;
   margin-bottom: 24px;
 }
-.catalog_card_tags {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-}
+
 .catalog_more {
   display: flex;
   justify-content: center;

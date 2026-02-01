@@ -2,8 +2,11 @@ html {
   scrollbar-gutter: stable;
 }
 .app_container {
+
+  font-family: 'Inter', sans-serif;
+}
+.container {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Inter', sans-serif;
 }

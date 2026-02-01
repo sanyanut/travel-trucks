@@ -10,6 +10,7 @@ import { toggleFavorites } from '../../redux/favorites/slice.js';
 import Button from '../../fragments/Button/Button.jsx';
 import Tag from '../../fragments/Tag/Tag.jsx';
 import { selectFavorites } from '../../redux/favorites/selectors.js';
+import FeaturesList from '../FeaturesList/FeaturesList.jsx';
 
 const CatalogList = () => {
   const dispatch = useDispatch();
@@ -80,23 +81,7 @@ const CatalogList = () => {
                     <p className={css.catalog_card_description}>
                       {item.description}
                     </p>
-                    <ul className={css.catalog_card_tags}>
-                      {staticParams.featuresList.map(
-                        ({ key, value, icon, text }, index) => {
-                          if (item[key] === true || item[key] === value) {
-                            return (
-                              <li
-                                className={css.catalog_card_tag}
-                                key={`${index}-${key}`}
-                              >
-                                <Tag text={text} icon={icon} />
-                              </li>
-                            );
-                          }
-                          return null;
-                        }
-                      )}
-                    </ul>
+                    <FeaturesList feature={item} />
                     <Button
                       link={`/catalog/${item.id}`}
                       text="Show more"

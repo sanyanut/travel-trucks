@@ -1,0 +1,89 @@
+.form_container {
+  width: 641px;
+  padding: 57px;
+  border: 1px solid #DADDE1;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.form_title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.form_subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6C717B;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 18px;
+  background: #F7F7F7;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #101828;
+  outline: none;
+}
+
+.textarea {
+  height: 114px;
+  resize: none;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.input_error {
+  border: 1px solid #E44848;
+}
+
+.error_text {
+  color: #E44848;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.submit_btn {
+  margin-top: 10px;
+  padding: 16px 60px;
+  background-color: #E44848;
+  color: #ffffff;
+  border: none;
+  border-radius: 200px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  align-self: center; /* Центрування кнопки як на макеті */
+  transition: background-color 0.3s ease;
+}
+
+.submit_btn:hover {
+  background-color: #D84343;
+}
+
+/* Стилізація календаря під інпути */
+:global(.react-datepicker-wrapper) {
+  width: 100%;
+}
